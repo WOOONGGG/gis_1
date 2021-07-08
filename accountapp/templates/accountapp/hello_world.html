@@ -2,31 +2,43 @@
 
 {% block content %}
 
-    <style>
-        .testing{
-            background-color: paleturquoise;
-            display: inline-block;
-            margin: 2rem; #margin이2rem이라박스밖으로나감
-            height: 48px;
-            width: 48px;
-            border-radius: .5rem;
-        }
+        <div style = 'margin: 3rem; text-align: center'>
+            <h1>METHOD</h1>
 
-    </style>
+            <form action="/accounts/hello_world/" method = 'post'>
+                {% csrf_token %}
+                <input type="submit" class="px-5 btn btn-dark rounded-pill">
+                <input type="text" name="hello_world_input">
+            </form>
 
+            <h2>{{hello_world_output.text}}</h2>
 
-    <div style ='height: 20rem; background-color: aqua;
-    margin: 2rem; border-radius: 1rem; font-size: 2rem'>
-        <h1>TEST</h1>
-        <div class="testing" style = 'height: 48px; width: 48px'>block</div>
-        <div class="testing" style = 'height: 3em; width: 3em'>block</div>
-        <div class="testing" style = 'height: 3rem; width: 3rem'>block</div>
-        <div class="testing" style = 'height: 30%; width: 30%'>block</div>
-
-
-
-
-    </div>
-
+        </div>
+{#    <style>#}
+{#        .testing{#}
+{#            background-color: paleturquoise;#}
+{#            display: inline-block;#}
+{#            margin: 2rem; #margin이2rem이라박스밖으로나감#}
+{#            height: 48px;#}
+{#            width: 48px;#}
+{#            border-radius: .5rem;#}
+{#        }#}
+{##}
+{#    </style>#}
+{##}
+{##}
+{#    <div style ='height: 20rem; background-color: aqua;#}
+{#    margin: 2rem; border-radius: 1rem; font-size: 2rem'>#}
+{#        <h1>TEST</h1>#}
+{#        <div class="testing" style = 'height: 48px; width: 48px'>block</div>#}
+{#        <div class="testing" style = 'height: 3em; width: 3em'>block</div>#}
+{#        <div class="testing" style = 'height: 3rem; width: 3rem'>block</div>#}
+{#        <div class="testing" style = 'height: 30%; width: 30%'>block</div>#}
+{##}
+{##}
+{##}
+{##}
+{#    </div>#}
+{##}
 
 {% endblock %}

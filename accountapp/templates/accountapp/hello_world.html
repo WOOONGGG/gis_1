@@ -11,8 +11,9 @@
                 <input type="text" name="hello_world_input">
             </form>
 
-            <h2>{{hello_world_output.text}}</h2>
-
+            {% for hello_world in hello_world_list %}
+                <h2>{{hello_world.text}}</h2>
+            {% endfor %}
         </div>
 {#    <style>#}
 {#        .testing{#}
